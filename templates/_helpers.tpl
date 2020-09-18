@@ -35,6 +35,7 @@ Common labels
 */}}
 {{- define "capsule.labels" -}}
 helm.sh/chart: {{ include "capsule.chart" . }}
+capsule.clastix.io/tenant: system
 {{ include "capsule.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
